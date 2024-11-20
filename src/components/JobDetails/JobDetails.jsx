@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
 import { saveJobsApplication } from "../../utility/localstorage";
+import { Helmet } from "react-helmet-async";
 
 const JobDetails = () => {
     const jobs = useLoaderData();
@@ -17,6 +18,9 @@ const JobDetails = () => {
     
     return (
         <div className="w-full  mx-auto px-5 md:px-0">
+            <Helmet>
+                <title>career hub || job details</title>
+            </Helmet>
             <h1 className="text-2xl font-bold text-center py-14">Job Details</h1>
             <div className="mb-14 flex flex-col md:flex-row">
                 <div className="md:w-2/3 w-full">
